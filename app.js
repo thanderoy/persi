@@ -21,16 +21,15 @@ function requestFullScreen(element) {
             element.msRequestFullScreen;
         if (requestMethod) {
             requestMethod.call(element);
+            console.log("[Pers] Playback automatically scaled to fullscreen.");
         }
     }
 }
 
 // Persistent
-window.onload = function() {
-    console.log('[Persi] is running...');
-    element = isolateTarget();
-    
+element = isolateTarget();
+if(element) {
     element.onload = function() {
         requestFullScreen(element);
     }; 
-}
+};
