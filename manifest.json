@@ -7,16 +7,16 @@
 	"homepage_url": "https://github.com/thanderoy/persi_extension/",
 
 	"icons": {
-		"48": "icons/border-48.png",
-		"64": "icons/border-64.png"
+		"48": "icons/persi-48.png",
+		"64": "icons/persi-64.png"
 	},
 	
-	"permissions": ["activeTab", "scripting"],
+	"permissions": ["tabs"],
 
 	"content_scripts": [
 		{
-			"matches": ["https://flixhq.ru/tv/*"],
-			"js": ["persi.js"]
+			"matches": ["https://aniwatch.to/*"],
+			"js": ["app.js"]
 		}
 	]
 }
